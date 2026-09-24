@@ -1,0 +1,27 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# LaTeX build files
+*.bcf
+*.run.xml
+*.blg
+*.bbl
+*.idx
+*.ilg
+*.ind
+*.dvi
+
+# OS files
+.DS_Store
+Thumbs.db
