@@ -1,0 +1,216 @@
+\documentclass[10pt,a4paper]{article}
+
+% --------------------------------------------------
+% PACKAGES
+% --------------------------------------------------
+
+\usepackage[top=0.48in,bottom=0.48in,left=0.62in,right=0.62in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+
+% Better PDF text extraction / ATS compatibility
+\input{glyphtounicode}
+\pdfgentounicode=1
+\ifdefined\pdfinterwordspaceon
+  \pdfinterwordspaceon
+\fi
+
+% --------------------------------------------------
+% GENERAL FORMATTING
+% --------------------------------------------------
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.00}
+
+\setlist[itemize]{
+  label=-,
+  leftmargin=1.15em,
+  itemsep=0pt,
+  topsep=1pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% Section headings
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{-4pt}\rule{\linewidth}{0.45pt}]
+
+\titlespacing{\section}{0pt}{5pt}{2pt}
+
+% --------------------------------------------------
+% CUSTOM COMMANDS
+% --------------------------------------------------
+
+% Main entry with title on left and date/link on right
+\newcommand{\entry}[2]{
+  \vspace{2pt}
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2 \\
+  \end{tabular*}
+}
+
+% Italic subtitle
+\newcommand{\subentry}[1]{
+  \textit{#1}\vspace{-1pt}
+}
+
+% Skills row
+\newcommand{\skillrow}[2]{
+  \begin{tabular*}{\textwidth}{@{}p{0.23\textwidth}@{\extracolsep{\fill}}p{0.73\textwidth}@{}}
+    \textbf{#1} & #2 \\
+  \end{tabular*}
+}
+
+% --------------------------------------------------
+% DOCUMENT
+% --------------------------------------------------
+
+\begin{document}
+
+% --------------------------------------------------
+% HEADER
+% --------------------------------------------------
+
+\begin{center}
+    {\LARGE \textbf{Vishara Jayalath}} \\[3pt]
+
+    \textbf{AI \& Data Science Undergraduate \;|\; ServiceNow Intern \;|\; CIMA CertBA} \\[3pt]
+
+    Colombo, Sri Lanka
+    \quad | \quad
+    \href{mailto:visharajayalath04@gmail.com}{visharajayalath04@gmail.com}
+    \quad | \quad
+    +94 77 714 1307 \\[2pt]
+
+    \href{https://www.linkedin.com/in/visharajayalath}
+    {linkedin.com/in/visharajayalath}
+    \quad | \quad
+    \href{https://github.com/visharaaa}
+    {github.com/visharaaa}
+\end{center}
+
+\vspace{-5pt}
+
+% --------------------------------------------------
+% PROFILE
+% --------------------------------------------------
+
+\section*{Profile}
+
+AI and Data Science undergraduate at the Informatics Institute of Technology and ServiceNow Intern at NEXT Technologies, with interests in applied AI, machine learning, data analytics, and workflow automation. Experience building data pipelines, developing machine learning solutions, and working with ServiceNow application development and business process automation. Curious and adaptable, with a focus on learning through practical projects and hands-on technical work.
+
+% --------------------------------------------------
+% EXPERIENCE
+% --------------------------------------------------
+
+\section*{Experience}
+
+\entry{ServiceNow Intern -- NEXT Technologies}{May 2026 -- Present}
+\subentry{Technology / Digital Operations}
+\begin{itemize}
+    \item Supporting the development and implementation of ServiceNow solutions with a focus on workflow automation, application development, and business process improvement.
+    \item Developing familiarity with ServiceNow administration, ITSM, scripting, application development, and platform-based workflow solutions.
+    \item Built a ServiceNow application using ServiceNow Build Agent, exploring AI-assisted application development and workflow design.
+    \item Collaborating with technical teams and gaining practical experience in Agile development, DevOps processes, and enterprise technology environments.
+\end{itemize}
+
+% --------------------------------------------------
+% EDUCATION
+% --------------------------------------------------
+
+\section*{Education}
+
+\entry{Informatics Institute of Technology (IIT)}{Sep 2024 -- Aug 2028}
+\subentry{Affiliated with Robert Gordon University}
+BSc in Artificial Intelligence and Data Science
+
+\entry{AICPA \& CIMA}{2024 -- Present}
+CIMA Certificate in Business Accounting (CertBA), completed 2025
+
+% --------------------------------------------------
+% SELECTED PROJECTS
+% --------------------------------------------------
+
+\section*{Selected Technical Projects}
+
+\entry{TeaCare AI -- Tea Leaf Disease Detection System}
+{\href{https://github.com/visharaaa/TeaCareAI}{github.com/visharaaa/TeaCareAI}}
+\subentry{Python, TensorFlow, Keras, NumPy, Pandas, Flask}
+\begin{itemize}
+    \item Leading development of an AI-based system for tea leaf disease detection and treatment recommendation for the Sri Lankan tea industry.
+    \item Performed exploratory data analysis and image preprocessing to assess dataset quality, class distribution, and model readiness.
+    \item Trained and evaluated deep learning models for disease classification and analyzed prediction errors to identify areas for improvement.
+    \item Contributed to an end-to-end system combining image-based disease detection, retrieval-augmented treatment recommendations, and treatment progress tracking.
+\end{itemize}
+
+\entry{Flight Price Data Pipeline}
+{\href{https://github.com/visharaaa/aws-flight-data-pipeline}{github.com/visharaaa/aws-flight-data-pipeline}}
+\subentry{AWS S3, AWS Glue, PySpark, Python, Boto3}
+\begin{itemize}
+    \item Designed and implemented an end-to-end AWS data pipeline processing 300K+ flight records for analytics.
+    \item Built a Python/Boto3 ingestion workflow to load raw data into Amazon S3 and developed an AWS Glue ETL pipeline using PySpark for cleaning and transformation.
+    \item Engineered features through aggregations and prepared structured datasets for downstream analysis.
+    \item Stored processed data in Parquet format and orchestrated automated execution using AWS Glue Workflows.
+\end{itemize}
+
+\entry{Telco Customer Churn Prediction \& Analysis}
+{\href{https://github.com/visharaaa/Telco-Churn-ML}{github.com/visharaaa/Telco-Churn-ML}}
+\subentry{Python, TensorFlow, Keras, Scikit-learn, Pandas}
+\begin{itemize}
+    \item Performed exploratory data analysis on a telecom dataset to identify patterns associated with customer churn.
+    \item Preprocessed data through encoding, scaling, and missing-value handling to prepare features for machine learning.
+    \item Trained and evaluated classification models using accuracy and F1-score to compare predictive performance.
+    \item Applied K-Means clustering to segment customers and analyzed model outputs to identify behavioural patterns.
+\end{itemize}
+
+% --------------------------------------------------
+% CERTIFICATIONS
+% --------------------------------------------------
+
+\section*{Certifications}
+
+\skillrow{IIT Professional Development Unit}
+{Data Visualization with MS Power BI (Sep 2025); Professional Certificate in Python Programming (Mar 2024); Professional Certificate in Java Programming with OOP Principles (May 2024)}
+
+\skillrow{SLIM}
+{Professional Certificate in Marketing (2021); Certificate in Digital Marketing (2021)}
+
+% --------------------------------------------------
+% SKILLS
+% --------------------------------------------------
+
+\section*{Technical Skills}
+
+\skillrow{Programming}
+{Python, SQL, Java, JavaScript, R, HTML, CSS}
+
+\skillrow{Data Science \& ML}
+{NumPy, Pandas, Scikit-learn, TensorFlow, Keras, Matplotlib, Seaborn}
+
+\skillrow{Data \& Cloud}
+{AWS S3, AWS Glue, PySpark, Boto3, Power BI}
+
+\skillrow{Tools \& Platforms}
+{Git, GitHub, VS Code, Jupyter Notebook, Google Colab, Linux}
+
+% --------------------------------------------------
+% LEADERSHIP
+% --------------------------------------------------
+
+\section*{Leadership \& Activities}
+
+\skillrow{IIT}
+{Vice President Membership, IIT Toastmasters; Secretary, Media Society; Design Lead, Women in Engineering Affinity Group}
+
+\skillrow{Holy Family Convent}
+{House Games Captain; Senior \& Junior Prefect; Secretary, English Union; Vice Secretary, Gavel Club; Head of Administrative Staff, HFC Model United Nations Conference}
+
+\end{document}
