@@ -1,0 +1,151 @@
+```latex
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=0.48in,bottom=0.48in,left=0.62in,right=0.62in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{array}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\ifdefined\pdfinterwordspaceon
+  \pdfinterwordspaceon
+\fi
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.00}
+
+\setlist[itemize]{
+  label=-,
+  leftmargin=1.15em,
+  itemsep=0pt,
+  topsep=1pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{-4pt}\rule{\linewidth}{0.45pt}]
+
+\titlespacing{\section}{0pt}{5pt}{2pt}
+
+\newcommand{\entry}[2]{
+  \vspace{2pt}
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2 \\
+  \end{tabular*}
+}
+
+\newcommand{\subentry}[1]{\textit{#1}\vspace{-1pt}}
+
+\newcommand{\skillrow}[2]{
+  \begin{tabular*}{\textwidth}{@{}p{0.23\textwidth}@{\extracolsep{\fill}}p{0.73\textwidth}@{}}
+    \textbf{#1} & #2 \\
+  \end{tabular*}
+}
+
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Your Name}} \\[3pt]
+Your Title \quad | \quad Your Degree \quad | \quad Your Qualification \\[3pt]
+City, Country \quad | \quad
+\href{mailto:your.email@example.com}{your.email@example.com} \quad | \quad
++00 000 000 000 \\[2pt]
+\href{https://www.linkedin.com/in/yourusername}{linkedin.com/in/yourusername}
+\quad | \quad
+\href{https://github.com/yourusername}{github.com/yourusername}
+\end{center}
+
+\vspace{-5pt}
+
+\section*{Profile}
+
+Write a concise professional profile describing your background, areas of interest, relevant experience, and the type of work you are interested in.
+
+\section*{Experience}
+
+\entry{Job Title -- Company Name}{Month Year -- Present}
+\subentry{Team / Department}
+\begin{itemize}
+\item Describe a key responsibility, contribution, or achievement.
+\item Describe a technical task, project, or process you worked on.
+\item Describe an outcome, improvement, or result where relevant.
+\end{itemize}
+
+\entry{Previous Job Title -- Company Name}{Month Year -- Month Year}
+\subentry{Team / Department}
+\begin{itemize}
+\item Describe a key responsibility, contribution, or achievement.
+\item Describe a technical task, project, or process you worked on.
+\end{itemize}
+
+\section*{Education}
+
+\entry{University Name}{Month Year -- Month Year}
+\subentry{Degree / Programme}
+Additional information if relevant.
+
+\entry{Institution Name}{Month Year -- Month Year}
+\subentry{Qualification}
+Additional information if relevant.
+
+\section*{Selected Technical Projects}
+
+\entry{Project Name}
+{\href{https://github.com/yourusername/project}{github.com/yourusername/project}}
+\subentry{Technology 1, Technology 2, Technology 3}
+\begin{itemize}
+\item Describe the problem the project addresses.
+\item Describe what you built and the technologies you used.
+\item Describe your specific contribution or technical approach.
+\item Include measurable results where relevant.
+\end{itemize}
+
+\entry{Project Name}
+{\href{https://github.com/yourusername/project}{github.com/yourusername/project}}
+\subentry{Technology 1, Technology 2, Technology 3}
+\begin{itemize}
+\item Describe the problem the project addresses.
+\item Describe what you built and the technologies you used.
+\item Describe your specific contribution or technical approach.
+\end{itemize}
+
+\section*{Certifications}
+
+\skillrow{Institution}
+{Certification Name (Month Year); Certification Name (Month Year)}
+
+\skillrow{Institution}
+{Certification Name (Month Year)}
+
+\section*{Technical Skills}
+
+\skillrow{Programming}
+{Python, SQL, Java, JavaScript}
+
+\skillrow{Data Science \& ML}
+{NumPy, Pandas, Scikit-learn, TensorFlow}
+
+\skillrow{Data \& Cloud}
+{AWS, PySpark, Databases}
+
+\skillrow{Tools \& Platforms}
+{Git, GitHub, VS Code, Linux}
+
+\section*{Leadership \& Activities}
+
+\skillrow{University}
+{Position, Society; Position, Organisation}
+
+\skillrow{Previous Institution}
+{Position, Society; Position, Organisation}
+
+\end{document}
+```
