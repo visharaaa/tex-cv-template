@@ -48,3 +48,4 @@ The template uses a compact single-page layout and is designed to remain readabl
 
 ## License
 
+This template is licensed under the [MIT License](LICENSE).
