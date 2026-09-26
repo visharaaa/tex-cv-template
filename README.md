@@ -48,4 +48,3 @@ The template uses a compact single-page layout and is designed to remain readabl
 
 ## License
 
-Free to use and modify for personal and professional CVs.
